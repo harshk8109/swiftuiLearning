@@ -10,6 +10,11 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         GeometryReader { geometry in
+            
+            Text("Helllo World! This is my first SwiftUI app!")
+                .font(.largeTitle)
+                .padding()
+            
             Button(action: {
                 print("Button tapped!")
             }) {
@@ -24,6 +29,7 @@ struct ContentView: View {
         .frame(width: 400, height: 400)  // Parent view size
         .background(Color.red)
     }
+    
 }
 
 
