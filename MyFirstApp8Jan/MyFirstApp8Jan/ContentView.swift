@@ -11,20 +11,29 @@ struct ContentView: View {
     var body: some View {
         GeometryReader { geometry in
             
-            Text("Helllo World! This is my first SwiftUI app!")
-                .font(.largeTitle)
-                .padding()
-            
-            Button(action: {
-                print("Button tapped!")
-            }) {
-                Text("Tap Me")
+            VStack {
+                Text("Helllo World! This is my first SwiftUI app!")
+                    .font(.largeTitle)
                     .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
+                
+                
+                Button(action: {
+                    print("Button tapped!")
+                }) {
+                    Text("Tap Me")
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .position(x: geometry.size.width / 2, y: geometry.size.height / 2) // Center position
+                
+                Spacer()
+                
+                Text("Hello Harsh.......")
+                    .font(.largeTitle)
+                    .padding()
             }
-            .position(x: geometry.size.width / 2, y: geometry.size.height / 2) // Center position
         }
         .frame(width: 400, height: 400)  // Parent view size
         .background(Color.red)
